@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>LimbApp : votez pour vos artistes</title>
+<meta name="description" content="LimbApp : votez chaque semaine pour vos chansons, films, comédiens et artistes préférés.">
+<meta name="theme-color" content="#111111">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="top">
+  <div class="logo" aria-label="LimbApp"><span class="l1">Limb</span><span class="l2" id="secret">App</span></div>
+  <svg class="trophy" viewBox="0 0 64 64" role="img" aria-label="Trophée">
+    <path d="M20 8h24v14c0 9-5 15-12 15S20 31 20 22z" fill="#F5B800"/>
+    <path d="M20 12h-8c0 10 4 16 10 17M44 12h8c0 10-4 16-10 17" fill="none" stroke="#F5B800" stroke-width="3" stroke-linecap="round"/>
+    <path d="M32 37v10" stroke="#F5B800" stroke-width="4"/>
+    <path d="M24 47h16v9H24z" fill="#F5B800"/>
+  </svg>
+</header>
+
+<main>
+  <p class="week" id="week"></p>
+  <p class="note" id="note" hidden></p>
+  <div id="cats"></div>
+  <div class="actions">
+    <button class="sm gold" data-open="m-apply">POSTULER</button>
+    <button class="sm" data-open="m-chat">Contacter l'Admin</button>
+    <a class="sm" href="resultats.html">Résultats</a>
+  </div>
+</main>
+
+<div class="votebar" id="votebar" hidden><button class="btn" id="review"></button></div>
+
+<footer class="foot">
+  <div class="logo"><span class="l1">Limb</span><span class="l2">App</span></div>
+  <div><button class="dl" id="install">&#11015; TÉLÉCHARGER L'APPLICATION</button></div>
+  <p>LimbApp @2026</p>
+  <p>Voter, c'est facultatif</p>
+</footer>
+
+<div class="modal" id="m-apply" hidden><div class="box"><button class="x" data-close aria-label="Fermer">&times;</button>
+  <h3>POSTULER</h3>
+  <p>Artistes : contactez-nous pour proposer votre chanson, votre film ou votre candidature.</p>
+  <a class="btn" id="wa" href="#" target="_blank" rel="noopener noreferrer">Contacter sur WhatsApp</a>
+  <a class="btn alt" id="mail" href="#">Envoyer un e-mail</a>
+  <p class="muted" id="apply-none" hidden>Les contacts ne sont pas encore configurés.</p>
+</div></div>
+
+<div class="modal" id="m-chat" hidden><div class="box"><button class="x" data-close aria-label="Fermer">&times;</button>
+  <h3>Contacter l'Admin</h3>
+  <div class="chat" id="chatlog"></div>
+  <textarea id="chattext" rows="3" maxlength="1000" placeholder="Votre message"></textarea>
+  <button class="btn" id="chatsend">Envoyer</button>
+  <p class="msg err" id="chatmsg"></p>
+</div></div>
+
+<div class="modal" id="m-confirm" hidden><div class="box"><button class="x" data-close aria-label="Fermer">&times;</button>
+  <h3>Vérifiez votre bulletin</h3>
+  <ul id="clist"></ul>
+  <p class="muted">Un seul bulletin par appareil et par semaine. Vous ne pourrez plus le modifier.</p>
+  <div id="ts"></div>
+  <button class="btn" id="confirm">Confirmer mon vote</button>
+  <button class="btn alt" data-close>Modifier</button>
+  <p class="msg" id="vmsg"></p>
+</div></div>
+
+<div class="modal" id="m-install" hidden><div class="box"><button class="x" data-close aria-label="Fermer">&times;</button>
+  <h3>Installer LimbApp</h3>
+  <p><b>Android (Chrome)</b> : ouvrez le menu &#8942;, puis « Installer l'application » ou « Ajouter à l'écran d'accueil ».</p>
+  <p><b>iPhone (Safari)</b> : touchez le bouton Partager, puis « Sur l'écran d'accueil ».</p>
+  <p><b>Ordinateur</b> : cliquez sur l'icône d'installation dans la barre d'adresse de Chrome ou Edge.</p>
+</div></div>
+
+<script src="js/config.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

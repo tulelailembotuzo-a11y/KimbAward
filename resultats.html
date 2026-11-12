@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Résultats : LimbApp</title>
+<meta name="theme-color" content="#111111">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="top">
+  <a class="logo" href="./" style="text-decoration:none" aria-label="Retour à l'accueil"><span class="l1">Limb</span><span class="l2">App</span></a>
+  <a class="sm" href="./">&larr; Accueil</a>
+</header>
+<main>
+  <div class="tabs" id="tabs">
+    <button class="tab on" data-p="week">Semaine</button>
+    <button class="tab" data-p="month">Mois</button>
+    <button class="tab" data-p="year">Année</button>
+  </div>
+  <p class="note" id="note" hidden></p>
+  <div id="live"></div>
+  <h2 style="color:#F5B800;font-size:18px;margin:26px 0 10px">Gagnants précédents</h2>
+  <div id="hist"></div>
+</main>
+<footer class="foot"><p>LimbApp @2026</p><p>Voter, c'est facultatif</p></footer>
+<script src="js/config.js"></script>
+<script src="js/results.js"></script>
+</body>
+</html>
